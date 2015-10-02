@@ -12,7 +12,8 @@
 
 int main (int argc, char** argv){
 
-   int server_sock, server_port, client_len, client_sock;
+   int server_sock, server_port, client_sock;
+   socklen_t client_len;
 
    struct sockaddr_in server_addr, client_addr;
 
