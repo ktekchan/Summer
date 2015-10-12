@@ -71,12 +71,21 @@ int max(int a, int b){
    return (a>b) ? a : b;
 }
 
+// Length of the longest path from root OR height
 int height(node *root){
    
    if(root==NULL)
       return 0;
    else
       return 1+max(height(root->left),height(root->right));
+}
+
+// Lenght of the shortest path from the root
+int shortest(node *root){
+   if(root==NULL)
+      return 0;
+   else
+      return 1+min(height(root->left),height(root->right));
 }
 
 int diameter(node *root){
@@ -93,20 +102,33 @@ int diameter(node *root){
    return max(lheight+rheight+1, max(ldia,rdia));
 }
 
+// Difference between the longest and the shortest path from root
+int differ(node *root){
+
+   if(root==NULL)
+      return 1000;
+   int max = height(root);
+   int min = shortest(root);
+   int diff = max - min;
+   return diff;
+}
+
 int main(){
    
    node *tree = newNode(1);
    tree->left = newNode(2);
-   tree->right = newNode(3);
+  // tree->right = newNode(3);
    tree->left->left = newNode(4);
-   tree->left->right = newNode(5);
-   tree->left->right->right = newNode(6);
-   tree->left->right->right->right = newNode(7);
+   tree->left->left->left = newNode(5);
+//   tree->left->right->right = newNode(6);
+  // tree->left->right->right->right = newNode(7);
 
-   cout << "Lowest Common Ancestor(4,5) " << findlca(tree,4,5) << endl;
-   cout << "Lowest Common Ancestor(6,4) " <<findlca(tree,6,4) << endl;
+   //cout << "Lowest Common Ancestor(4,5) " << findlca(tree,4,5) << endl;
+  // cout << "Lowest Common Ancestor(6,4) " <<findlca(tree,6,4) << endl;
 
-   cout << "Diameter: " << diameter(tree) << endl;
+   //cout << "Diameter: " << diameter(tree) << endl;
+   cout << "Diff : " << differ(tree) << endl;
+   cout << "Min : " << shortest(tree) << endl;
 
    return 0;
 }

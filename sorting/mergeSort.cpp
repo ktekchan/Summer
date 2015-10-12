@@ -26,7 +26,7 @@
  	// Merging them back together
  	i=0;
  	j=0;
- 	k=l;
+ 	k=0;
  	while(i<size1 && j<size2){
  		if(left[i]<=right[j]){
  			arr[k] = left[i];

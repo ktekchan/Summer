@@ -24,7 +24,7 @@ void allPerm(char *str, int l, int r){
    else{
       for(i=l; i<=r; i++){
          swap((str+l),(str+i)); //Swap with ith elem
-         allPerm(str,l+1,r); //new permutation
+         allPerm(str,i+1,r); //new permutation
          swap((str+l),(str+i)); //Swap back to original to have only one ref
       }
    }

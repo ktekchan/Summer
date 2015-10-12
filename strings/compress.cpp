@@ -17,13 +17,13 @@ void compress(string str){
    string ret = "";
 
    i = 0;
-   j = 0;
-   char comp = str[i];
-   int count = 0;
+ //  j = 0;
+ //  char comp = str[i];
+ //  int count = 0;
 
    while(i<len){
-      comp = str[i];
-      count = 0;
+      char comp = str[i];
+      int count = 0;
       while(str[i] == comp){
          count++;
          i++;

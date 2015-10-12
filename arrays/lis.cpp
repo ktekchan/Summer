@@ -15,10 +15,14 @@ void findlis(int arr[], int n){
    lis = (int*)malloc(sizeof(int)*n);
 
    int i;
+
+   //Initializing length of longest increasing subsequence to one for all
+   //indices
    for(i=0; i<n; i++){
       lis[i] = 1;
    }
 
+   // Calculating lis for each index
    for(i=1; i<n; i++){
       for(int j=0; j<i; j++){
          if(arr[i] > arr[j] && lis[i] < lis[j] + 1)
@@ -28,6 +32,7 @@ void findlis(int arr[], int n){
 
    int max = lis[0];
 
+   // find max of all found lis
    for(i=0; i<n; i++){
       if (max < lis[i])
          max = lis[i];
