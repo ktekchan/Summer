@@ -1,4 +1,5 @@
 /*
+ * Khushboo Tekchandani
  * Find the only single digit from a number that has all other 
  * digits appearing twice
  */

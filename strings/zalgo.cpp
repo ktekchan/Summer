@@ -1,6 +1,6 @@
 /*
  * Author: Khushboo Tekchandani
- * Z algorithm for linear time patter searching
+ * Z algorithm for linear time pattern searching
  * Construct Z array for pat$string and find the elements having the length
  * same as the pattern. Pattern exists from the the indices of such elements
  */

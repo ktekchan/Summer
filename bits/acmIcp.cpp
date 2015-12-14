@@ -1,5 +1,5 @@
 /*
- * Author: Khushboo Tekchandani
+ * Khushboo Tekchandani
  * Find the maximum number of teams that can know the maximum number of
  * topic. 
  */

@@ -117,18 +117,18 @@ int main(){
    
    node *tree = newNode(1);
    tree->left = newNode(2);
-  // tree->right = newNode(3);
+   tree->right = newNode(3);
    tree->left->left = newNode(4);
    tree->left->left->left = newNode(5);
-//   tree->left->right->right = newNode(6);
-  // tree->left->right->right->right = newNode(7);
+   tree->left->right->right = newNode(6);
+   tree->left->right->right->right = newNode(7);
 
-   //cout << "Lowest Common Ancestor(4,5) " << findlca(tree,4,5) << endl;
+   cout << "Lowest Common Ancestor(4,5) " << findlca(tree,4,5) << endl;
   // cout << "Lowest Common Ancestor(6,4) " <<findlca(tree,6,4) << endl;
 
    //cout << "Diameter: " << diameter(tree) << endl;
-   cout << "Diff : " << differ(tree) << endl;
-   cout << "Min : " << shortest(tree) << endl;
+   //cout << "Diff : " << differ(tree) << endl;
+   //cout << "Min : " << shortest(tree) << endl;
 
    return 0;
 }
